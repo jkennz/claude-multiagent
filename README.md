@@ -31,26 +31,26 @@ Instead of a single AI tackling your entire task, this plugin coordinates **8 sp
 
 Or for local development:
 ```bash
-claude --plugin-dir /path/to/claude-multiagent-planner
+claude --plugin-dir /path/to/claude-multiagent
 ```
 
 ### Basic Usage
 
 ```bash
 # Fix a bug
-/multiagent-planner:plan fix the authentication timeout bug
+/planner:plan fix the authentication timeout bug
 
 # Add a feature
-/multiagent-planner:plan add user avatar upload feature
+/planner:plan add user avatar upload feature
 
 # Refactor code
-/multiagent-planner:plan refactor the billing module to reduce duplication
+/planner:plan refactor the billing module to reduce duplication
 
 # Write tests
-/multiagent-planner:plan write tests for the auth middleware
+/planner:plan write tests for the auth middleware
 
 # Review changes
-/multiagent-planner:plan review changes in the payment module
+/planner:plan review changes in the payment module
 ```
 
 ## The 7-Phase Pipeline
@@ -112,7 +112,7 @@ claude-multiagent-planner/
 ├── .claude-plugin/
 │   └── plugin.json              # Plugin manifest
 ├── commands/
-│   └── plan.md                  # /multiagent-planner:plan command
+│   └── plan.md                  # /planner:plan command
 ├── skills/
 │   └── multiagent-planner/
 │       ├── SKILL.md             # Main orchestrator instructions
