@@ -22,10 +22,15 @@ Instead of a single AI tackling your entire task, this plugin coordinates **8 sp
 ### Installation
 
 ```bash
-# Clone or download the plugin
-git clone https://github.com/yourusername/claude-multiagent-planner.git
+# Add the marketplace
+/plugin marketplace add jkennz/claude-multiagent
 
-# Run Claude Code with the plugin
+# Install the plugin
+/plugin install planner@claude-multiagent
+```
+
+Or for local development:
+```bash
 claude --plugin-dir /path/to/claude-multiagent-planner
 ```
 
