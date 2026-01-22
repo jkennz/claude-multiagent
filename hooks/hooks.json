@@ -1,0 +1,27 @@
+{
+  "description": "Multiagent Planner hooks for completion verification",
+  "hooks": {
+    "SubagentStop": [
+      {
+        "matcher": "explorer|bug-finder|test-planner|refactorer|architect|searcher|advisory-panel",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Verify subagent output follows the output contract:\n\n- Is output concise and actionable?\n- Does it follow the required format?\n- Are findings prioritized by impact?\n\nRespond with JSON: {\"ok\": true} if valid, or provide feedback to improve the output.",
+            "timeout": 15
+          }
+        ]
+      },
+      {
+        "matcher": "reviewer",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "The reviewer (final phase) has completed. Verify the full planning task:\n\n1. Was the 7-phase pipeline followed? (Frame → Context Pack → Specialist Passes → Synthesize → Quality Gates → Review)\n2. Did Explorer agent run to build Context Pack?\n3. Is the output in canonical plan format?\n4. Are all acceptance criteria defined?\n5. Does the reviewer verdict include PROCEED/BLOCK?\n\nRespond with JSON: {\"ok\": true} if complete, or {\"ok\": false, \"reason\": \"what's missing\"} to continue.",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

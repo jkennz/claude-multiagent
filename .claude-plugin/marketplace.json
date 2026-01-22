@@ -1,0 +1,14 @@
+{
+  "name": "multiagent",
+  "owner": {
+    "name": "Kenn"
+  },
+  "plugins": [
+    {
+      "name": "planner",
+      "source": "./",
+      "description": "Hub-and-spoke multiagent planning system",
+      "strict": false
+    }
+  ]
+}

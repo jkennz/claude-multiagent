@@ -1,0 +1,25 @@
+{
+  "name": "planner",
+  "description": "Hub-and-spoke multiagent planning system with 7-phase invariant pipeline and specialist subagents for comprehensive software engineering planning",
+  "version": "1.0.1",
+  "author": {
+    "name": "Kenn"
+  },
+  "commands": [
+    "./commands/plan.md"
+  ],
+  "skills": [
+    "./skills/multiagent-planner/SKILL.md"
+  ],
+  "agents": [
+    "./agents/explorer.md",
+    "./agents/bug-finder.md",
+    "./agents/test-planner.md",
+    "./agents/refactorer.md",
+    "./agents/reviewer.md",
+    "./agents/architect.md",
+    "./agents/searcher.md",
+    "./agents/advisory-panel.md"
+  ],
+  "hooks": "./hooks/hooks.json"
+}
